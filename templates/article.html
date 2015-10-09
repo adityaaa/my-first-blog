@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block sidebar %}
+
+<head>
+
+    <link rel='stylesheet' type='type/css' href='{% static 'css/bootstrap.min.css' %}'>
+    <link rel='stylesheet' type='type/css' href='{% static 'css/default.css' %}'>
+
+</head>
+
+<html>
+
+<ul>
+	<li><a href="/articles/all">Articles</a></li>
+</ul>
+
+{% endblock %}
+{% block content %}
+
+<h1>{{ article.title}}</h1>
+<p>{{ article.body }}</p>
+{% if article.hero_image %}
+<p><img class="img-responsive center-block" src="/static/{{article.hero_image}}" width="200"/></p>
+{% endif %}
+<p>{{ article.likes }} People Liked this article</p>
+<p><a href="/articles/like/{{article.id}}">Like</a></p>
+
+<!--<h2>Comments</h2>
+{% for c in article.comment_set.all %}
+<p>{{c.name}}: {{c.body}}</p>
+{% endfor %}
+
+<p><a href="/articles/add_comment/{{article.id}}">Add Comment</a></p> -->
+
+{% endblock %}
