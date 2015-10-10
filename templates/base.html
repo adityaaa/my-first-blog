@@ -87,6 +87,29 @@
             <script src="{% static "js/bootstrap.min.js" %}"></script>
 </body>
 
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+
+<hr>
+
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="previous">
+                        <a href="#">&larr; Older</a>
+                    </li>
+                    <li class="next">
+                        <a href="#">Newer &rarr;</a>
+                    </li>
+                </ul>
+<div>
+
+
 
 <body>
 
@@ -104,19 +127,19 @@
 <!-- Wrapper for slides -->
 <div class="carousel-inner" role="listbox">
     {% for p in articles %}
-        {% if forloop.counter == 1 %}
-            <div class="item active">
-        {% else %}
-            <div class="item">
-        {% endif %}
+		{% if forloop.counter == 1 %}
+    		<div class="item active">
+    	{% else %}
+    		<div class="item">
+    	{% endif %}
         
-        <img class="img-responsive center-block" src="/static/{{p.hero_image}}" alt="Image" width="200" height="200">
-        <!--<div class="carousel-caption">
-            <h3>{{ p.title }}</h3>
-            <p>{{ p.author }}</p>
-        </div>-->
+        <img src="/static/{{p.hero_image}}" alt="Image" width="200" height="200">
+  		<div class="carousel-caption">
+    		<h3>{{ p.title }}</h3>
+    		<p>{{ p.author }}</p>
+  		</div>
     </div>
-    {% endfor %}    
+	{% endfor %}    
     </div>
 
     <!-- Left and right controls -->
