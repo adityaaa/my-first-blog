@@ -1,0 +1,59 @@
+body{
+
+color: 
+	
+}
+
+
+.fbox{
+     text-align: center;
+}
+.fbox span{
+	font-size: 60px;
+}
+
+.clear{
+clear:both;
+}
+.jumbotron2{
+	margin-top: 70px;
+float:right;
+}
+
+.footer{
+text-align: center;
+padding: auto;
+color: Blue;
+}
+
+.neva{
+	margin-top: 100px;
+}
+
+
+.articles-sidebar{
+	margin-top: 50px;
+}
+
+.articles-featured{
+	margin-top: 1px;
+	border-radius: 25px;
+	padding: 10px;
+	text-align: center;
+
+}
+
+.head{
+	margin-top: 70px;
+
+}
+
+.form{
+	margin-right: 50px;
+}
+
+
+.jumbotron{
+	text-align: center;
+}
+
